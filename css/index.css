@@ -1,0 +1,69 @@
+html {
+  font-size: 15px;
+}
+body {
+  font-size: 1.2rem;
+  min-width: 320px;
+  max-width: 640px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: #7bbfea;
+}
+.banner {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background-color: #eee;
+  color: #000000;
+}
+.banner li {
+  display: inline-block;
+  font-size: 1.6rem;
+  text-align: center;
+}
+.banner li:nth-child(2) {
+  margin-right: 15px;
+}
+.banner li:nth-child(4) {
+  margin-right: 20px;
+}
+.banner .button_add {
+  background-color: #a3cf62;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  color: #ffffff;
+  border: 1px solid #a3cf62;
+  border-radius: 5px;
+}
+.banner .button_minus {
+  background-color: #f391a9;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  color: #ffffff;
+  border: 1px solid #f391a9;
+  border-radius: 5px;
+}
+.banner .button_on_off {
+  display: inline-block;
+  background-color: #4172b8;
+  width: 60px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 30px;
+  color: #ffffff;
+  vertical-align: middle;
+}
+.banner .button_on_off .round {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #ffffff;
+}

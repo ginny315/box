@@ -1,0 +1,91 @@
+@import './lib/common.less';
+html{
+	font-size: 15px;
+}
+body {
+    font-size: 1.2rem;
+    min-width: 320px;
+	max-width: 640px;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+.container{
+	width: 100%;
+	height: 100%;
+	background-color: #7bbfea;
+	//text-align: center;
+}
+
+.fontColor(@fc:#000){
+	color: @fc;
+}
+@buttonSize:30px;
+.button_border(@border_color:#000){
+	border: 1px solid @border_color;
+}
+.button_radius(@button_radius:5px){
+	border-radius: @button_radius;
+}
+
+.bgColor(@bgColor:#fff){
+	background-color: @bgColor;
+}
+
+.banner{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	background-color: #eee;
+	.fontColor();
+	li{
+		display: inline-block;
+		font-size: 1.6rem;
+		text-align: center;
+	}
+
+	li:nth-child(2){
+		margin-right: 15px;
+	}
+	li:nth-child(4){
+		margin-right: 20px;
+	}
+	.button_add{
+		.bgColor(#a3cf62);
+		width: @buttonSize;
+		height: @buttonSize;
+		line-height: @buttonSize;
+		.fontColor(#fff);
+		.button_border(#a3cf62);
+		.button_radius();
+	}
+	.button_minus{
+		.bgColor(#f391a9);
+		width: @buttonSize;
+		height: @buttonSize;
+		line-height: @buttonSize;
+		.fontColor(#fff);
+		.button_border(#f391a9);
+		.button_radius();
+	}
+	.button_on_off{
+		display: inline-block;
+		.bgColor(#4172b8);
+		width: 2*@buttonSize;
+		height: @buttonSize;
+		line-height: @buttonSize;
+		.button_radius(@buttonSize);
+		.fontColor(#fff);
+		vertical-align: middle;
+
+		.round{
+			display: inline-block;
+			width: @buttonSize;
+			height: @buttonSize;
+			border-radius: @buttonSize/2;
+			.bgColor();
+		}
+	}
+
+
+}
