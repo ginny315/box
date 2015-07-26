@@ -22,6 +22,7 @@ define(['FFF','zepto','box'], function(FFF,$,Box) {
                 selected:{
                     value:'-',
                     changeSelect:function(obj){//通过点击后属性的改变而改变                
+                        alert("changeSelect");
                     }
                 },
             }

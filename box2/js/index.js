@@ -21,12 +21,13 @@ require(['FFF','zepto','box','littlebox'],function(FFF,$,Box,LittleBox){
 	$('.button_add').on('click',function(){
 		cnt = $('.sum').html();
 		boxList[cnt] = new LittleBox.LittleBox();
+		console.log(boxList[cnt]);
 
 		boxList[cnt].render({
 		container:$('.container'),
 		type:'append'
 		});
-		//console.log(cnt);
+		console.log(boxList[cnt]);
 		//$('.sum').html(cnt);
 	});
 	//$('.choosered').trigger('red');
