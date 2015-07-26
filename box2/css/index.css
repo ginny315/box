@@ -1,0 +1,136 @@
+html {
+  font-size: 15px;
+}
+body {
+  font-size: 1.2rem;
+  min-width: 320px;
+  max-width: 640px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: #7bbfea;
+}
+.container {
+  width: 100%;
+  height: 100%;
+}
+.banner {
+  padding: 0 20px;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background-color: #eee;
+  color: #000000;
+}
+.banner li {
+  display: inline-block;
+  font-size: 1.6rem;
+  text-align: center;
+}
+.banner li:nth-child(2) {
+  margin-right: 15px;
+}
+.banner li:nth-child(4) {
+  margin-right: 20px;
+}
+.banner .button_add {
+  background-color: #a3cf62;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  color: #ffffff;
+  border: 1px solid #a3cf62;
+  border-radius: 5px;
+}
+.banner .button_minus {
+  background-color: #f391a9;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  color: #ffffff;
+  border: 1px solid #f391a9;
+  border-radius: 5px;
+}
+.banner .button_on_off {
+  margin-left: 20px;
+  display: inline-block;
+  background-color: #4172b8;
+  width: 75px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 30px;
+  color: #ffffff;
+  vertical-align: middle;
+}
+.banner .button_on_off .round {
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #ffffff;
+  right: -20px;
+}
+.banner .button_on_off:before {
+  content: 'on';
+  position: relative;
+  z-index: 9;
+  left: 0;
+  bottom: 5px;
+  color: #fff;
+}
+.banner .button_on_off:after {
+  content: 'off';
+  position: relative;
+  z-index: 9;
+  bottom: 9px;
+  right: 0px;
+  color: #fff;
+}
+.box {
+  background: #293047;
+  margin: 20px 20px 10px;
+  display: inline-block;
+  color: #fff;
+  font: 2rem bold;
+  width: 100px;
+  height: 80px;
+}
+.choosered {
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+  line-height: 25px;
+  background-color: #ff0000;
+  border: 1px solid #ff0000;
+  border-radius: 0 10px 10px 0;
+  color: #fff;
+  text-align: center;
+}
+.chooseyellow {
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+  line-height: 25px;
+  background-color: #ffe600;
+  border: 1px solid #ffe600;
+  border-radius: 10px 0 0 10px;
+  color: #fff;
+  text-align: center;
+  margin: 0 0 0 20px;
+}
+.close {
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  background-color: #ff0000;
+  color: #fff;
+  text-align: center;
+  border-radius: 12px;
+  font-size: 1rem;
+  position: relative;
+  top: -100px;
+  left: 105px;
+  opacity: 1;
+}
