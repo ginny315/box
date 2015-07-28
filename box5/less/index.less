@@ -13,7 +13,6 @@ body {
 .container{
 	width: 100%;
 	height: 100%;
-	//text-align: center;
 }
 
 .fontColor(@fc:#000){
@@ -31,14 +30,16 @@ body {
 	background-color: @bgColor;
 }
 
-.banner{
-	padding: 0 20px;
+.banner{ 	
 	width: 100%;
 	height: 50px;
 	line-height: 50px;
 	background-color: #eee;
 	.fontColor();
+	ul{
+		padding: 0 0 0 20px;
 	li{
+		
 		display: inline-block;
 		font-size: 1.6rem;
 		text-align: center;
@@ -49,6 +50,7 @@ body {
 	}
 	li:nth-child(4){
 		margin-right: 20px;
+	}
 	}
 	.button_add{
 		.bgColor(#a3cf62);
@@ -95,7 +97,7 @@ body {
 		position: relative;
 		z-index: 9;
 		left:0;
-		bottom: 5px;
+		bottom: 9px;
 		color: #fff;
 	}
 	.button_on_off:after{
@@ -108,9 +110,12 @@ body {
 	}
 }
 
+.wrap{
+	display: inline-block;
+}
 .box{
 	background:#293047;
-    margin:20px 20px 10px;
+    margin:20px 20px 30px;
     display:inline-block;
     color:#fff;
     font:2rem bold;
@@ -120,6 +125,7 @@ body {
 
 .choosered{
 	display:inline-block;
+	position: relative;
 	width:50px;
 	height:25px;
 	line-height:25px;
@@ -128,10 +134,13 @@ body {
 	border-radius:0 10px 10px 0;
 	color:#fff;
 	text-align:center;
+	left: -165px;
+	bottom: -90px;
 }
 
 .chooseyellow{
 	display:inline-block;
+	position: relative;
 	width:50px;
 	height:25px;
 	line-height:25px;
@@ -141,10 +150,13 @@ body {
 	color:#fff;
 	text-align:center;
 	margin:0 0 0 20px;
+	left: -165px;
+	bottom: -90px;
 }
 
 @close_width:24px;
 .close{
+	display: inline-block;
 	width: @close_width;
 	height: @close_width;
 	line-height: @close_width;
@@ -154,7 +166,7 @@ body {
 	border-radius: @close_width/2;
 	font-size: 1rem;
 	position: relative;
-	top:-100px;
-	left: 105px;
+	top:-12px;
+	left: -33px;
 	opacity: 1;
 }

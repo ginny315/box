@@ -14,11 +14,7 @@ define(['FFF','zepto'],function(FFF,$){
     /*1represent+,2represent-*/
     boxCount:{
         value:0,
-        changeFn:function(obj){
-            //obj.value ++;
-            console.log('obj.value='+obj.value);
-        }
-    }
+    },
     }
 
     //Box继承自Widget
@@ -46,7 +42,7 @@ define(['FFF','zepto'],function(FFF,$){
         //绑定事件//改变后重新渲染事件？？？
         bindUI:function(){
             var that = this;
-            var MyBoxHeader = that.getBoundingBox().find('.sum');
+            var MyBoxHeader = that.getBoundingBox();
             
             $('.button_add').on('click',function(){
                 var MyBoxCount = that.getBoxCount();
@@ -55,14 +51,7 @@ define(['FFF','zepto'],function(FFF,$){
                 $sum.html(that.getBoxCount());
             });
 
-/*            $('.button_minus').on('click',function(){
-                //console.log(boxList.length);
-                //that.setBoxCount(boxList.length);
-                var $sum = $('.sum');
-                $sum.html(MyBoxCount);
-            });*/
-            MyBoxHeader.on('minusself',function(){
-                //alert('aaa');
+            MyBoxHeader.on('minusself',function(obj){
                 var MyBoxCount = that.getBoxCount();
                 that.setBoxCount(+MyBoxCount-1);
                 var $sum = $('.sum');
@@ -78,8 +67,7 @@ define(['FFF','zepto'],function(FFF,$){
         //销毁对象(未实现)
         destructor:function(obj){
             console.log("I am destory!");
-        },
-    
+        },   
     });
 
     return{

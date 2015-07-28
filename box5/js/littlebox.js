@@ -1,16 +1,14 @@
 define(['FFF','zepto','box'], function(FFF,$,Box) {
             var F = FFF.FFF,
             Box = Box.Box;
-            //Widget = F.Widget;
             
             function LittleBox() {
                 Box.apply(this, arguments);
-                //Widget.apply(this, arguments);
             }
 
             LittleBox.ATTRS = {
                 boundingBox:{
-                value:$('<div></div>'),
+                value:$('<div class="wrap"></div>'),
                 },
                 /*0represent'#293047',1represent'yellow',2represent'red'*/
                 color:{
@@ -39,30 +37,20 @@ define(['FFF','zepto','box'], function(FFF,$,Box) {
                     }
                 },
 
-/*                father:{
-                    value:
-                }*/
+                currentIndex:{
+                    value:0,
+                    changeFn:function(){
+                    }
+                },
+
+                die:{
+                    value:0,
+                }
             }
 
             F.extend(LittleBox, Box,{
-            //F.extend(LittleBox, Widget,{
                 //初始化
                 initialize:function(){
-                    //var $sum = $('.sum');
-                    //$sum.html(+$sum.html()+1);
-/*                    console.log(this);
-                    var that = this;
-                    console.log(Box);
-                    console.log(Box.ATTRS);
-                    console.log(Box.ATTRS.boxCount.value);
-                    var MyBoxCount = Box.ATTRS.boxCount.value;
-                    var MyBoxCount = Box.getBoxCount();
-                    var $sum = $('.sum');
-                    //$sum.html(+$sum.html()+1);
-                    console.log("MyBoxCount="+MyBoxCount);
-                    var a = MyBoxCount+1;
-                    Box.ATTRS.setBoxCount(a);
-                    $sum.html(a);*/
                 },
                 //渲染
                 renderUI:function(){
@@ -104,26 +92,18 @@ define(['FFF','zepto','box'], function(FFF,$,Box) {
                         }) 
 
                         MyBox.find('.close').on('click',function(){
+                            //console.log(MyBox.index());
+                            $('.sum').trigger('minusself',{
+                                target:'MyBox.index()',//传递目前所在的索引
+                            });
+                            that.setCurrentIndex(MyBox.index());
+                            that.setDie(4);
                             MyBox.remove();
-                            //var $sum = $('.sum');
-                            //$sum.html(+$sum.html()-1);
-                            //MyBoxCount --;
-                            //$sum.html(MyBoxCount);
-                            console.log(MyBox);
-                            console.log(MyBox.parent());
-                            $('.sum').trigger('minusself');
+                            F.trigger('changeIndex',{'t':1});                            
                         })                       
                     },
                     destructor:function(){ 
-                        /*var that = this;
-                        var MyBoxCount = that.getBoxCount();
-                        var $sum = $('.sum');
-                        $sum.html(+$sum.html()-1);*/
-                        //console.log("MyBoxCount="+MyBoxCount);
-                        //that.setBoxCount(--MyBoxCount);
-                        //$sum.html(MyBoxCount);
                     }
-
                 });
 
             return {
